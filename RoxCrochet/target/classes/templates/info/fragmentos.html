@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="~{layout/plantilla :: head}">
+        <title>Techshop</title>
+        <meta charset="UTF-8"/>        
+   <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+    </style>
+    </head>
+    
+    <body>
+<section th:fragment="sobre_nosotros">
+    <div class="relative h-screen">
+        <img alt="Background image of crochet pieces" class="w-full h-full object-cover" src="https://storage.googleapis.com/a1aa/image/uKFh2PDrQ2ehfPFX5Xu4vYuRw7Xn7Rhi_zLzEB2o6Wc.jpg"/>
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center pt-0 space-y-6">
+            <h2 class="text-4xl font-bold text-yellow-600 mb-2">¿quienes somos?</h2>
+            <div class="bg-gray-200 bg-opacity-75 p-4 mb-2 max-w-2xl text-left self-start ml-4">
+                <p>En Rox Crochet, nos dedicamos a crear piezas únicas de crochet hechas a mano con amor y dedicación. Nuestra misión es aportar calidez y estilo a tu hogar con productos de alta calidad que reflejan nuestra pasión por la artesanía.</p>
+            </div>
+            <div class="bg-gray-200 bg-opacity-75 p-4 mb-2 max-w-2xl text-left self-end mr-4">
+                <p>Rox Crochet nació en 2020, inspirado por la tradición familiar y el amor por el crochet. Desde nuestros humildes comienzos, hemos crecido gracias al apoyo de nuestra comunidad y la dedicación a nuestro oficio. Cada pieza que creamos cuenta una historia de creatividad y esmero.</p>
+            </div>
+            <div class="bg-gray-200 bg-opacity-75 p-4 max-w-2xl text-left self-start ml-4">
+                <ul class="list-disc pl-5">
+                    <li>Calidad: Nos comprometemos a ofrecer productos de la más alta calidad, elaborados con materiales seleccionados cuidadosamente.</li>
+                    <li>Artesanía: Valoramos el trabajo artesanal y cada pieza es creada con atención al detalle y dedicación.</li>
+                    <li>Sostenibilidad: Nos esforzamos por utilizar materiales sostenibles y prácticas ecológicas para cuidar nuestro planeta.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+    </body>
+</html>

@@ -1,0 +1,5 @@
+com\RoxCrochet\controller\inicioController.class
+com\RoxCrochet\RoxCrochetApplication.class
+com\RoxCrochet\controller\contactController.class
+com\RoxCrochet\controller\menuCliente.class
+com\RoxCrochet\controller\InfoController.class

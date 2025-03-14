@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="~{layout/plantilla :: head}">
+        <title>Techshop</title>
+        <meta charset="UTF-8"/>        
+   <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+    </style>
+    </head>
+    
+    <body>
+<section th:fragment="inicio" class="relative h-screen">
+ <img alt="Close-up of hands crocheting with yarn balls in the background" class="w-full h-full object-cover" src="https://storage.googleapis.com/a1aa/image/CZ_F4Ib483OGpPt25ZgOZ9ZshViz0KhNNk-HEoZJmeg.jpg"/>
+   <div class="absolute inset-0 flex items-center justify-center">
+    <div class="bg-white bg-opacity-75 p-8 rounded shadow-lg text-center">
+     <p class="text-gray-700 mb-4">
+      Esta pantalla es provisional mientras implementamos el registro e inicio de sesión, pero queremos que pueda tener una idea de cómo se vería hasta el momento nuestro sitio web.
+     </p>
+     <div class="space-x-4">
+      <a class="bg-red-600 text-white px-4 py-2 rounded" th:href="@{/cliente/listado}">
+       Cliente
+      </a>
+      <a class="bg-blue-600 text-white px-4 py-2 rounded" th:href="@{/administrador/listado}">
+       Administrador
+      </a>
+     </div>
+    </div>
+   </div>
+
+
+</section>
+
+    </body>
+</html>

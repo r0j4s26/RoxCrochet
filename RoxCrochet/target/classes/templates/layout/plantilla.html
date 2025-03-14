@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+    <head th:fragment="head">
+        <title>Rox Crochet</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+        <style>
+            body {
+                font-family: 'Roboto', sans-serif;
+            }
+            .hover-effect:hover {
+                box-shadow: 0 4px 8px rgba(139, 69, 19, 0.5);
+                border-radius: 8px;
+                transition: box-shadow 0.3s ease-in-out;
+            }
+            .hover-border:hover {
+                background-color: rgba(139, 69, 19, 0.5);
+                border-radius: 8px;
+                transition: background-color 0.3s ease-in-out;
+            }
+            .rounded-button {
+    display: inline-block;  /* Helps in setting dimensions */
+    padding: 10px 20px;    /* Adjust as necessary */
+    background-color: brown; /* Brown fill */
+    color: white;          /* Text color */
+    text-align: center;    /* Center text */
+    border-radius: 15px;   /* Rounding corners */
+    text-decoration: none;  /* Remove underline */
+    transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+.rounded-button:hover {
+    background-color: darkbrown; /* Change on hover */
+}
+        </style>
+    </head>
+    <body>
+        <header th:fragment="header" class="bg-white shadow-md">
+            <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+                <div class="text-2xl font-bold text-green-800">
+                    Rox Crochet
+                </div>
+                <nav class="space-x-4">
+                    <a class="text-gray-700 hover:text-gray-900 hover-border px-2 py-1 rounded" th:href="@{/info/listado}">Sobre nosotros</a>
+                    <a class="text-gray-700 hover:text-gray-900 hover-border px-2 py-1 rounded" th:href="@{/contact/listado}">Contactanos</a>
+                    <a class="text-gray-700 hover:text-gray-900 hover-border px-2 py-1 rounded" th:href="@{/inicio/listado}">Log in or Sign up</a>
+                </nav>
+            </div>
+        </header>
+
+        <main th:fragment="main" class="relative">
+            <img alt="Close-up of crochet yarn and a crochet hook" class="w-full h-screen object-cover" height="1080" src="https://img.freepik.com/foto-gratis/manos-mujer-haciendo-trabajo-tejer-casa_1150-17414.jpg?t=st=1741659828~exp=1741663428~hmac=29cb9d0d8b1d9eb40dbf20e41d179302420ccf20b101a5deee301364a877d8dc&w=1380" width="1920"/>
+            <div class="absolute inset-0 flex items-center justify-end pr-10">
+                <div class="bg-white bg-opacity-90 p-8 rounded-lg shadow-lg max-w-md text-center hover-effect">
+                    <h1 class="text-3xl font-bold text-yellow-800 mb-4">
+                        Descubre nuestra nueva coleccion
+                    </h1>
+                    <p class="text-gray-700 mb-6">
+                        Aqui podras encontrar los productos de la mejor calidad hechos en crochet
+                    </p>
+                    <a class="rounded-button" th:href="@{/inicio/listado}">
+                        Comprar
+                    </a>
+                </div>
+            </div>
+        </main>
+
+        <footer th:fragment="footer" class="p-2 mt-5 bg-info text-white">
+            <p class="text-center lead">&COPY; Todos los derechos reservados</p>
+        </footer>
+    </body>
+</html>
