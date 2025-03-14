@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="~{layout/plantilla :: head}">
+        <title>Techshop</title>
+        <meta charset="UTF-8"/>        
+   <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+    </style>
+    </head>
+    
+    <body>
+        
+<section th:fragment="contact" class="flex">
+  
+  <div class="lg:w-1/3 p-4" style="text-align: right;">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15307.006313232074!2d-83.93066727351793!3d9.849735496137823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2scr!4v1741812320146!5m2!1ses!2scr" width="600" height="450" style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <img alt="A small blue crochet toy on a table" class="mt-4 w-full rounded-lg" height="400" src="https://storage.googleapis.com/a1aa/image/DGnwRoWL8BGmCjb-1XlZgt4i9q1a7BNPNLzM4O8X6eg.jpg" width="600"/>
+  </div>
+
+  <div class="lg:w-2/3 p-4 bg-cover bg-center relative" style="background-image: url('https://img.freepik.com/vector-gratis/ilustracion-concepto-ganchillo_114360-6029.jpg?t=st=1741813683~exp=1741817283~hmac=8b9a95e99b24fe22a1b44d20c101cd5fdbff2b08156b71117e344112f7451550&w=900');">
+    <div class="absolute inset-0 bg-yellow-200 bg-opacity-50 p-4 rounded-lg">
+      <h2 class="text-lg font-bold mb-2 text-green-800">Rox Crochet</h2>
+      <h3 class="text-lg font-bold mb-4">Completa el formulario y te responderemos pronto:</h3>
+      <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
+
+        <label for="correo">Correo Electrónico:</label>
+        <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+
+        <label for="asunto">Asunto:</label>
+        <input type="text" id="asunto" name="asunto" placeholder="Elige un asunto" required>
+            <br>
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" required></textarea>
+
+        <button type="submit">Enviar Mensaje</button>
+      </form>
+      <div class="mt-4">
+        <h3 class="text-lg font-bold">Información de Contacto</h3>
+        <p>Correo Electrónico: <a class="text-blue-600" href="mailto:contacto@rox-crochet.com">contacto@rox-crochet.com</a></p>
+        <p>Teléfono: +506 1234 5678</p>
+        <p>Dirección: Las Margaritas, Provincia de Cartago, Paraíso, 30201</p>
+      </div>
+      <div class="mt-4">
+        <h3 class="text-lg font-bold">Redes Sociales</h3>
+        <p>Síguenos en:</p>
+        <p>Facebook</p>
+        <p>Instagram</p>
+        <p>Pinterest</p>
+        <p>como RoxCrochet</p>
+      </div>
+      <div class="mt-4">
+        <h3 class="text-lg font-bold">Horario de Atención</h3>
+        <p>Lunes a viernes, de 9:00 a.m. a 6:00 p.m. si escribe fuera de este horario nuestro equipo le atenderá el próximo día lo antes posible.</p>
+      </div>
+    </div>
+  </div>
+</section>
+       
+       
+        <section  th:fragment="productos" 
+    </body>
+</html>

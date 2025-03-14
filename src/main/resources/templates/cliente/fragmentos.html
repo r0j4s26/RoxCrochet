@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="~{layout/plantilla :: head}">
+        <title>Techshop</title>
+        <meta charset="UTF-8"/>        
+   <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+    </style>
+    </head>
+    
+    <body>
+        <section th:fragment="menu"  class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 h-96">
+                 <div class="relative">
+                <img alt="Cute crochet plush toy" class="w-full h-full object-cover" height="400" src="https://img.freepik.com/foto-gratis/juguete-peluche-lindo-hecho-ganchillo_23-2151145654.jpg?t=st=1741833112~exp=1741836712~hmac=24806532b3b39daf3f42ae62b4f9f10670cc926d9a906552cc18eabd898b29bd&w=740" width="600"/>
+                <div class="absolute inset-0 flex flex-col justify-center items-center space-y-20">
+                    <a th:href="@{/menuCliente/listado}" class="bg-yellow-300 bg-opacity-75 px-16 py-8 text-black text-5xl font-bold hover:bg-yellow-400">pedidos</a>
+                    <a href="#" class="bg-yellow-300 bg-opacity-75 px-16 py-8 text-black text-5xl font-bold hover:bg-yellow-400">Catalogo</a>
+                </div>
+            </div>
+
+            <div class="relative">
+                <img alt="Close-up of woman's hands holding several balls of colored yarn" class="w-full h-full object-cover" height="400" src="https://img.freepik.com/foto-gratis/manos-mujer-primer-plano-sosteniendo-varias-bolas-hilo-colores_169016-52071.jpg?t=st=1741833080~exp=1741836680~hmac=d2e90e39651dcbc07ffc339fdc5ba294bc7f6f874186ac7f6ba0157efa03ce29&w=740" width="600"/>
+                <div class="absolute inset-0 flex flex-col justify-center items-center space-y-20">
+                    <a href="#" class="bg-yellow-300 bg-opacity-75 px-16 py-8 text-black text-5xl font-bold hover:bg-yellow-400 text-center">Administrar<br>usuarios</a>
+                    <a href="#" class="bg-yellow-300 bg-opacity-75 px-16 py-8 text-black text-5xl font-bold hover:bg-yellow-400">Cerrar sesión</a>
+                </div>
+            </div>
+</section>
+ 
+<section th:fragment="pedido"  class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 h-96">
+                 <div class="relative">
+                <img alt="Cute crochet plush toy" class="w-full h-full object-cover" height="400" src="https://img.freepik.com/foto-gratis/juguete-peluche-lindo-hecho-ganchillo_23-2151145654.jpg?t=st=1741833112~exp=1741836712~hmac=24806532b3b39daf3f42ae62b4f9f10670cc926d9a906552cc18eabd898b29bd&w=740" width="600"/>
+                <div class="absolute inset-0 flex flex-col justify-center items-center space-y-20">
+                    <a href="#" class="bg-yellow-300 bg-opacity-75 px-16 py-8 text-black text-5xl font-bold hover:bg-yellow-400">ver pedidos</a>
+                </div>
+            </div>
+            <div class="relative">
+                <img alt="Close-up of woman's hands holding several balls of colored yarn" class="w-full h-full object-cover" height="400" src="https://img.freepik.com/foto-gratis/manos-mujer-primer-plano-sosteniendo-varias-bolas-hilo-colores_169016-52071.jpg?t=st=1741833080~exp=1741836680~hmac=d2e90e39651dcbc07ffc339fdc5ba294bc7f6f874186ac7f6ba0157efa03ce29&w=740" width="600"/>
+                <div class="absolute inset-0 flex flex-col justify-center items-center space-y-20">
+                    <a href="#" class="bg-yellow-300 bg-opacity-75 px-16 py-8 text-black text-5xl font-bold hover:bg-yellow-400 text-center">Historial de<br>pedidos</a>
+                    <a href="#" class="bg-yellow-300 bg-opacity-75 px-16 py-8 text-black text-5xl font-bold hover:bg-yellow-400">salir</a>
+                </div>
+            </div>
+</section>
+        
+        <section th:fragment="modInfo" class=" ">
+    <div class="relative h-screen">
+        <img alt="Background image of crochet pieces" class="w-full h-full object-cover"  src="https://storage.googleapis.com/a1aa/image/dPnMwApSa_zKo0iAjsOrQzXA9Elv7N47k077-W3aRsM.jpg"/>
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center pt-0 space-y-6">
+        <div class="flex-grow flex items-center justify-start pl-8">
+     <div class="bg-gray-800 bg-opacity-70 p-8 rounded-lg w-full max-w-md">
+      <h2 class="text-white text-2xl font-bold mb-6">
+       actualizacion de informacion de cuenta
+      </h2>
+      <form>
+       <div class="mb-4">
+        <label class="block text-white mb-2" for="name">
+         Nombre
+        </label>
+        <input class="w-full p-2 rounded bg-gray-200 border border-gray-300" id="name" type="text"/>
+       </div>
+       <div class="mb-4">
+        <label class="block text-white mb-2" for="phone">
+         Celular
+        </label>
+        <input class="w-full p-2 rounded bg-gray-200 border border-gray-300" id="phone" type="text"/>
+       </div>
+       <div class="mb-4">
+        <label class="block text-white mb-2" for="email">
+         Correo Electronico
+        </label>
+        <input class="w-full p-2 rounded bg-gray-200 border border-gray-300" id="email" type="email"/>
+       </div>
+       <div class="mb-4">
+        <label class="block text-white mb-2" for="password">
+         Contraseña
+        </label>
+        <input class="w-full p-2 rounded bg-gray-200 border border-gray-300" id="password" type="password"/>
+       </div>
+       <div class="mb-6">
+        <label class="block text-white mb-2" for="confirm-password">
+         confirmar contraseña
+        </label>
+        <input class="w-full p-2 rounded bg-gray-200 border border-gray-300" id="confirm-password" type="password"/>
+       </div>
+       <div class="flex justify-between">
+        <button class="bg-gray-500 text-white py-2 px-4 rounded" type="button">
+         Cancelar
+        </button>
+        <button class="bg-green-600 text-white py-2 px-4 rounded" type="submit">
+         Actualizar informacion
+        </button>
+       </div>
+      </form>
+     </div>
+    </div>
+        </div>
+    </div>
+        </section>
+            
+            <section th:fragment="reseña">
+                    <div class="relative h-screen">
+        <img alt="Background image of crochet pieces" class="w-full h-full object-cover" src="https://storage.googleapis.com/a1aa/image/JRQvmgSOstdrO9-xxvRJsbtSoer_nqMyGjAY5YGmMe0.jpg"/>
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center pt-0 space-y-6">
+            
+  <div class="bg-green-200 bg-opacity-75 p-8 rounded-lg max-w-md w-full">
+            <h1 class="text-3xl font-bold text-white mb-4">
+                ¡su opinion es de gran importancia para nosotros!
+            </h1>
+            <form>
+                <div class="mb-4">
+                    <label class="block text-white mb-2" for="product-type">
+                        Tipo de producto
+                    </label>
+                    <input class="w-full p-2 rounded border border-green-800" id="product-type" type="text"/>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-white mb-2" for="name">
+                        Nombre
+                    </label>
+                    <input class="w-full p-2 rounded border border-green-800" id="name" type="text"/>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-white mb-2" for="comment">
+                        comentario
+                    </label>
+                    <textarea class="w-full p-2 rounded border border-green-800" id="comment"></textarea>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-white mb-2" for="rating">
+                        calificación
+                    </label>
+                    <div class="text-white" id="rating">
+                        <i class="fas fa-star star" data-value="1"></i>
+                        <i class="fas fa-star star" data-value="2"></i>
+                        <i class="fas fa-star star" data-value="3"></i>
+                        <i class="fas fa-star star" data-value="4"></i>
+                        <i class="fas fa-star star" data-value="5"></i>
+                    </div>
+                </div>
+                <button class="w-full bg-blue-600 text-white p-2 rounded" type="submit">
+                    Actualizar informacion
+                </button>
+            </form>
+        </div>
+    </div>
+            </section>
+   
+        </section>
+    </body>
+</html>

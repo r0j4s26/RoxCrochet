@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="~{layout/plantilla :: head}">
+        <title>Techshop</title>
+        <meta charset="UTF-8"/>        
+   <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+    </style>
+    </head>
+    
+    <body>
+        <section th:fragment="menu"  class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 h-96">
+                 <div class="relative">
+                <img alt="Cute crochet plush toy" class="w-full h-full object-cover" height="400" src="https://img.freepik.com/foto-gratis/juguete-peluche-lindo-hecho-ganchillo_23-2151145654.jpg?t=st=1741833112~exp=1741836712~hmac=24806532b3b39daf3f42ae62b4f9f10670cc926d9a906552cc18eabd898b29bd&w=740" width="600"/>
+                <div class="absolute inset-0 flex flex-col justify-center items-center space-y-20">
+                    <a th:href="@{/menuCliente/Pedido}" class="bg-yellow-300 bg-opacity-75 px-16 py-8 text-black text-5xl font-bold hover:bg-yellow-400">pedidos</a>
+                    <a href="#" class="bg-yellow-300 bg-opacity-75 px-16 py-8 text-black text-5xl font-bold hover:bg-yellow-400">Catalogo</a>
+                </div>
+            </div>
+
+            <div class="relative">
+                <img alt="Close-up of woman's hands holding several balls of colored yarn" class="w-full h-full object-cover" height="400" src="https://img.freepik.com/foto-gratis/manos-mujer-primer-plano-sosteniendo-varias-bolas-hilo-colores_169016-52071.jpg?t=st=1741833080~exp=1741836680~hmac=d2e90e39651dcbc07ffc339fdc5ba294bc7f6f874186ac7f6ba0157efa03ce29&w=740" width="600"/>
+                <div class="absolute inset-0 flex flex-col justify-center items-center space-y-20">
+                    <a href="#" class="bg-yellow-300 bg-opacity-75 px-16 py-8 text-black text-5xl font-bold hover:bg-yellow-400 text-center">Administrar<br>usuarios</a>
+                    <a href="#" class="bg-yellow-300 bg-opacity-75 px-16 py-8 text-black text-5xl font-bold hover:bg-yellow-400">Cerrar sesión</a>
+                </div>
+            </div>
+</section>
+ 
+<section th:fragment="pedido"  class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 h-96">
+                 <div class="relative">
+                <img alt="Cute crochet plush toy" class="w-full h-full object-cover" height="400" src="https://img.freepik.com/foto-gratis/juguete-peluche-lindo-hecho-ganchillo_23-2151145654.jpg?t=st=1741833112~exp=1741836712~hmac=24806532b3b39daf3f42ae62b4f9f10670cc926d9a906552cc18eabd898b29bd&w=740" width="600"/>
+                <div class="absolute inset-0 flex flex-col justify-center items-center space-y-20">
+                    <a href="#" class="bg-yellow-300 bg-opacity-75 px-16 py-8 text-black text-5xl font-bold hover:bg-yellow-400">ver pedidos</a>
+                    <a href="#" class="bg-yellow-300 bg-opacity-75 px-16 py-8 text-black text-5xl font-bold hover:bg-yellow-400">Administrar<br>pedidos</a>
+                
+                </div>
+            </div>
+            <div class="relative">
+                <img alt="Close-up of woman's hands holding several balls of colored yarn" class="w-full h-full object-cover" height="400" src="https://img.freepik.com/foto-gratis/manos-mujer-primer-plano-sosteniendo-varias-bolas-hilo-colores_169016-52071.jpg?t=st=1741833080~exp=1741836680~hmac=d2e90e39651dcbc07ffc339fdc5ba294bc7f6f874186ac7f6ba0157efa03ce29&w=740" width="600"/>
+                <div class="absolute inset-0 flex flex-col justify-center items-center space-y-20">
+                    <a href="#" class="bg-yellow-300 bg-opacity-75 px-16 py-8 text-black text-5xl font-bold hover:bg-yellow-400 text-center">Historial de<br>pedidos</a>
+                    <a href="#" class="bg-yellow-300 bg-opacity-75 px-16 py-8 text-black text-5xl font-bold hover:bg-yellow-400">salir</a>
+                </div>
+            </div>
+</section>
+       
+ <section th:fragment="usuarios"  class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 h-96">
+                 <div class="relative">
+                <img alt="Cute crochet plush toy" class="w-full h-full object-cover" height="400" src="https://img.freepik.com/foto-gratis/juguete-peluche-lindo-hecho-ganchillo_23-2151145654.jpg?t=st=1741833112~exp=1741836712~hmac=24806532b3b39daf3f42ae62b4f9f10670cc926d9a906552cc18eabd898b29bd&w=740" width="600"/>
+                <div class="absolute inset-0 flex flex-col justify-center items-center space-y-20">
+                    <a href="#" class="bg-yellow-300 bg-opacity-75 px-16 py-8 text-black text-5xl font-bold hover:bg-yellow-400">ver<Br>usuarios</a>
+                </div>
+            </div>
+            <div class="relative">
+                <img alt="Close-up of woman's hands holding several balls of colored yarn" class="w-full h-full object-cover" height="400" src="https://img.freepik.com/foto-gratis/manos-mujer-primer-plano-sosteniendo-varias-bolas-hilo-colores_169016-52071.jpg?t=st=1741833080~exp=1741836680~hmac=d2e90e39651dcbc07ffc339fdc5ba294bc7f6f874186ac7f6ba0157efa03ce29&w=740" width="600"/>
+                <div class="absolute inset-0 flex flex-col justify-center items-center space-y-20">
+                    <a href="#" class="bg-yellow-300 bg-opacity-75 px-16 py-8 text-black text-5xl font-bold hover:bg-yellow-400 text-center">Eliminar<br>usuarios</a>
+                    <a href="#" class="bg-yellow-300 bg-opacity-75 px-16 py-8 text-black text-5xl font-bold hover:bg-yellow-400">salir</a>
+                </div>
+            </div>
+</section>       
+
+ <section th:fragment="productos"  class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 h-96">
+                 <div class="relative">
+                <img alt="Cute crochet plush toy" class="w-full h-full object-cover" height="400" src="https://img.freepik.com/foto-gratis/juguete-peluche-lindo-hecho-ganchillo_23-2151145654.jpg?t=st=1741833112~exp=1741836712~hmac=24806532b3b39daf3f42ae62b4f9f10670cc926d9a906552cc18eabd898b29bd&w=740" width="600"/>
+                <div class="absolute inset-0 flex flex-col justify-center items-center space-y-20">
+                    <a href="#" class="bg-yellow-300 bg-opacity-75 px-16 py-8 text-black text-5xl font-bold hover:bg-yellow-400">Agregar<Br>producto</a>
+                    <a href="#" class="bg-yellow-300 bg-opacity-75 px-16 py-8 text-black text-5xl font-bold hover:bg-yellow-400">Eliminar<Br>producto</a>
+               
+                </div>
+            </div>
+            <div class="relative">
+                <img alt="Close-up of woman's hands holding several balls of colored yarn" class="w-full h-full object-cover" height="400" src="https://img.freepik.com/foto-gratis/manos-mujer-primer-plano-sosteniendo-varias-bolas-hilo-colores_169016-52071.jpg?t=st=1741833080~exp=1741836680~hmac=d2e90e39651dcbc07ffc339fdc5ba294bc7f6f874186ac7f6ba0157efa03ce29&w=740" width="600"/>
+                <div class="absolute inset-0 flex flex-col justify-center items-center space-y-20">
+                    <a href="#" class="bg-yellow-300 bg-opacity-75 px-16 py-8 text-black text-5xl font-bold hover:bg-yellow-400 text-center">Modificar<br>producto<br>usuarios</a>
+                    <a href="#" class="bg-yellow-300 bg-opacity-75 px-16 py-8 text-black text-5xl font-bold hover:bg-yellow-400">salir</a>
+                </div>
+            </div>
+</section> 
+        
+        <section th:fragments="agregarProducto">    
+                <div class="relative h-screen">
+        <img alt="Background image of crochet pieces" class="w-full h-full object-cover" src="https://img.freepik.com/foto-gratis/mujer-tejer-artesania-aficion-hecho-casa_53876-31491.jpg?t=st=1741917746~exp=1741921346~hmac=28dc3f99e1e23198887473cccebecd93e561d7c26c05a0bfc9ecfa7d7fcac5f8&w=1380"/>
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center pt-0 space-y-6">
+           
+            <span class="text-gray-700 z-10">agregar imagen del producto</span>
+        </div>
+        <div class="bg-gray-200 bg-opacity-50 p-8 m-4 w-full md:w-1/3">
+            <h2 class="text-white text-2xl font-bold mb-4">Agregar nuevo producto</h2>
+            <form>
+                <div class="mb-4">
+                    <label class="block text-white mb-2" for="category">Categoria</label>
+                    <input class="w-full p-2" type="text" id="category" name="category">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-white mb-2" for="productName">Nombre producto</label>
+                    <input class="w-full p-2" type="text" id="productName" name="productName">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-white mb-2" for="price">Precio</label>
+                    <input class="w-full p-2" type="text" id="price" name="price">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-white mb-2" for="description">Descripción</label>
+                    <textarea class="w-full p-2" id="description" name="description"></textarea>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-white mb-2" for="quantity">Cantidad de unidades disponibles</label>
+                    <input class="w-full p-2" type="text" id="quantity" name="quantity">
+                </div>
+                <button class="bg-blue-400 text-white py-2 px-4 rounded">Agregar producto</button>
+            </form>
+        </div>
+    </div>
+
+</section>
+    </body>
+</html>
